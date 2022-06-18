@@ -2,3 +2,19 @@
 <button (click)="fetchPosts()">
     trigger post service
 </button>
+
+<ng-container *ngIf="postsList.length > 0">
+    <h2>
+        Posts:
+    </h2>
+    <ul>
+        <li *ngFor="let post of postsList ">
+            <h3>
+                {{post.title}}
+            </h3>
+            <p>
+                {{post.body}}
+            </p>
+        </li>
+    </ul>
+</ng-container>
